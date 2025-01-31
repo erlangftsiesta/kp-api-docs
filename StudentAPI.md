@@ -4,7 +4,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## POST /api/students/add
+- ## POST /api/students/add - Role: User
   Endpoint tersebut digunakan untuk membuat akun Animo, parameter yang diperlukan adalah Request Body JSON dengan key sebagai berikut: `nomor_pendaftaran, nisn, nama_lengkap, nama_panggilan, jenis_kelamin, tempat_lahir, tanggal_lahir, alamat, kelurahan, kecamatan, kabupaten_kota, provinsi, kode_pos, sekolah_pilihan, tipe_pendaftar, pindah_di_tahun_ajaran, tanggal_mulai_masuk, kelas_pilihan, jurusan, jalur_seleksi, asal_sekolah, kontak_pendaftar, kontak_orangtua_wali, email, informasi_pendaftaran, alasan_minat_pendaftaran`.
 
 ### Response JSON:
@@ -28,7 +28,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## GET /api/students/all
+- ## GET /api/students/all - Role: Admin
   Endpoint tersebut digunakan untuk mencari data seluruh akun siswa yang sudah membayar uang pendaftaran (terdaftar)
 
 ### Response JSON:
@@ -58,7 +58,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## GET /api/users/{np}
+- ## GET /api/users/{np} - Role: Admin
   Endpoint tersebut digunakan untuk mencari akun siswa yang lebih spesifik dengan `nomor_pendaftaran` (np)
 
 ### Response JSON:
@@ -101,7 +101,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## PUT /api/students/{np}
+- ## PUT /api/students/{np} - Role: Admin
   Endpoint tersebut digunakan untuk memperbarui data akun Animo, parameter yang diperlukan adalah Request Body JSON dengan key sebagai berikut: `nomor_pendaftaran, nisn, nama_lengkap, nama_panggilan, jenis_kelamin, tempat_lahir, tanggal_lahir, alamat, kelurahan, kecamatan, kabupaten_kota, provinsi, kode_pos, sekolah_pilihan, tipe_pendaftar, pindah_di_tahun_ajaran, tanggal_mulai_masuk, kelas_pilihan, jurusan, jalur_seleksi, asal_sekolah, kontak_pendaftar, kontak_orangtua_wali, email, informasi_pendaftaran, alasan_minat_pendaftaran`.
 
 ### Response JSON:
@@ -170,7 +170,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## DELETE /api/students/{np}
+- ## DELETE /api/students/{np} - Role: Admin
   Endpoint tersebut digunakan untuk menghapus data akun animo via nomor_pendaftaran (np).
 
 ### Response JSON:
