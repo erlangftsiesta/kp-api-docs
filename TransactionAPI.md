@@ -4,7 +4,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## POST /api/transactions/create-new
+- ## POST /api/transactions/create-new - Role: Admin
   Endpoint tersebut digunakan untuk membuat transaksi/tagihan baru yang akan dibebankan pada akun siswa, parameter yang diperlukan adalah Request Body JSON dengan key sebagai berikut: `nomor_pendaftaran, total_harga, deskripsi, kode_transaksi, tanggal_pembayaran`.
 
 ### Response JSON:
@@ -29,7 +29,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## GET /api/transactions/unpaid/students
+- ## GET /api/transactions/unpaid/students - Role: Admin
   Endpoint tersebut digunakan untuk mencari keseluruhan transaksi yang belum lunas dari calon siswa yang sudah melakukan pembayaran `uang_pendaftaran` sehingga `role` nya pada database sudah menjadi `terdaftar`.
 
 ### Response JSON:
@@ -62,7 +62,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## GET /api/transactions/unpaid/animos
+- ## GET /api/transactions/unpaid/animos - Role: Admin
   Endpoint tersebut digunakan untuk mencari keseluruhan transaksi yang belum lunas dari calon siswa yang sama sekali belum melakukan pembayaran, uang pendaftaran maupun uang MPLS.
 
 ### Response JSON:
@@ -94,7 +94,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## GET /api/transactions/{np}
+- ## GET /api/transactions/{np} - Role: Admin
   Endpoint tersebut digunakan untuk mencari detail transaksi dari 1 akun (entah `Animo` maupun yang `Terdaftar`)
 
 ### Response JSON:
@@ -134,7 +134,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## GET /api/transactions/all
+- ## GET /api/transactions/all - Role: Admin
   Endpoint tersebut digunakan untuk mencari seluruh transaksi yang tercatat dalam table `transaksi`.
 
 ### Response JSON:
@@ -220,7 +220,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## GET /api/transactions/account/{np}
+- ## GET /api/transactions/account/{np} - Role: Admin
   Endpoint tersebut digunakan untuk mencari 1 transaksi dari 1 account. parameter yang diperlukan adalah Request Body JSON dengan key sebagai berikut: `id`.
 
 ### Response JSON:
@@ -243,7 +243,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## PUT /api/transactions/{np}
+- ## PUT /api/transactions/{np} - Role: Admin
   Endpoint tersebut digunakan untuk memperbarui 1 data transaksi dari 1 akun, parameter yang diperlukan adalah Request Body JSON dengan key sebagai berikut: `id, total_harga,deskripsi,kode_transaksi,tanggal_pembayaran,status,`.
 
 ### Response JSON:
@@ -289,7 +289,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## DELETE /api/transactions/{np}
+- ## DELETE /api/transactions/{np} - Role: Admin
   Endpoint tersebut digunakan untuk menghapus data 1 transaksi dari 1 akun. Parameter yang diperlukan adalah Request Body JSON dengan key sebagai berikut: `nomor_pendaftaran, id`.
 
 ### Response JSON:
