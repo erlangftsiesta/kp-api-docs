@@ -6,7 +6,6 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 - ## POST /api/users/create-new
   Endpoint tersebut digunakan untuk membuat akun Animo, parameter yang diperlukan adalah Request Body JSON dengan key sebagai berikut: `nama_panggilan, nomor_telepon, npsn, nama_sekolah`.
-
 ### Response JSON:
 
 ```json
@@ -27,7 +26,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## GET /api/users/{np}
+- ## GET /api/users/{np} - Role: Admin
   Endpoint tersebut digunakan untuk mencari data akun animo via nomor_pendaftaran (np).
 
 ### Response JSON:
@@ -51,7 +50,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## PUT /api/users/{np}
+- ## PUT /api/users/{np} - Role: Admin
   Endpoint tersebut digunakan untuk memperbarui data akun Animo, parameter yang diperlukan adalah Request Body JSON dengan key sebagai berikut: `nomor_pendaftaran, nama_panggilan, nomor_telepon, npsn, nama_sekolah, nama_sekolah, status_akun, role`.
 
 ### Response JSON:
@@ -92,7 +91,7 @@ Dokumentasi ini berisi fungsi dan penjelasan seluruh endpoint API yang berhubung
 
 ---
 
-- ## DELETE /api/users/{np}
+- ## DELETE /api/users/{np} - Role: Admin
   Endpoint tersebut digunakan untuk menghapus data akun animo via parameter nomor_pendaftaran (np).
 
 ### Response JSON:
